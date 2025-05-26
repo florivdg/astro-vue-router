@@ -7,30 +7,30 @@ if (!import.meta.env.SSR) {
     history: createWebHistory(),
     routes: [
       {
-        path: '/tools/one',
-        redirect: '/tools/one/sub1',
+        path: '/portfolio/projects',
+        redirect: '/portfolio/projects/web',
         children: [
           {
-            path: 'sub1',
-            component: () => import('../components/views/1-sub1.vue'),
+            path: 'web',
+            component: () => import('../components/views/ProjectsWeb.vue'),
           },
           {
-            path: 'sub2',
-            component: () => import('../components/views/1-sub2.vue'),
+            path: 'mobile',
+            component: () => import('../components/views/ProjectsMobile.vue'),
           },
         ],
       },
       {
-        path: '/tools/two',
-        redirect: '/tools/two/sub1',
+        path: '/portfolio/about',
+        redirect: '/portfolio/about/bio',
         children: [
           {
-            path: 'sub1',
-            component: () => import('../components/views/2-sub1.vue'),
+            path: 'bio',
+            component: () => import('../components/views/AboutBio.vue'),
           },
           {
-            path: 'sub2',
-            component: () => import('../components/views/2-sub2.vue'),
+            path: 'contact',
+            component: () => import('../components/views/AboutContact.vue'),
           },
         ],
       },

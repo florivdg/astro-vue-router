@@ -1,11 +1,69 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from '../layouts/Layout.astro'
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Vue Router + Astro Demo">
+  <main>
+    <h1>🚀 Vue Router + Astro Demo</h1>
+    <p>
+      A simple portfolio app showcasing client-side routing with Vue.js inside
+      an Astro project.
+    </p>
+
+    <div class="demo-links">
+      <a href="/portfolio/projects" class="demo-link">
+        <h3>📁 Projects</h3>
+        <p>Browse web and mobile projects with client-side navigation</p>
+      </a>
+      <a href="/portfolio/about" class="demo-link">
+        <h3>👋 About</h3>
+        <p>Learn more with bio and contact sections</p>
+      </a>
+    </div>
+  </main>
 </Layout>
+
+<style>
+  main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    color: #2563eb;
+    margin-bottom: 1rem;
+  }
+
+  .demo-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .demo-link {
+    padding: 1.5rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.2s;
+    background: white;
+  }
+
+  .demo-link:hover {
+    border-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+  }
+
+  .demo-link h3 {
+    margin: 0 0 0.5rem 0;
+    color: #1f2937;
+  }
+
+  .demo-link p {
+    margin: 0;
+    color: #6b7280;
+  }
+</style>
