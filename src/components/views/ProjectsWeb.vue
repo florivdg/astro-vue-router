@@ -26,13 +26,6 @@
             {{ project.liked ? '❤️' : '🤍' }} {{ project.likes }}
           </button>
         </div>
-        <button
-          @click="toggleLike(project)"
-          class="like-btn"
-          :class="{ liked: project.liked }"
-        >
-          {{ project.liked ? '❤️' : '🤍' }} {{ project.likes }}
-        </button>
       </div>
     </div>
   </div>
